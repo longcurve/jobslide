@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+
 class HomeController extends Controller
 {
-    public function Home()
+    public function index()
     {
-        return View::make('index');
+        return View::make('welcome');
     }
 }
