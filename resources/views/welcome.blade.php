@@ -12,7 +12,7 @@
 
         <!-- Styles -->
         <style>
-            {!! assets('welcome.css') !!}
+            @vite(['resources/css/welcome.css'])
         </style>
     </head>
     <body class="antialiased">
