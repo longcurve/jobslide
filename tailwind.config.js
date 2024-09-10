@@ -8,6 +8,7 @@ export default {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/views/*.blade.php',
+        './node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx,vue}',
         './node_modules/flowbite/**/*.js'
     ],
 
