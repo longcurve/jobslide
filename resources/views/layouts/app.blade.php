@@ -15,7 +15,14 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-        
+        <script setup>
+            import {
+            FwbAccordion,
+            FwbAccordionContent,
+            FwbAccordionHeader,
+            FwbAccordionPanel,
+            } from 'flowbite-vue'
+        </script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
