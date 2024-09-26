@@ -12,7 +12,7 @@
                     Welcome to JobSlide! 
                 </div>
                 <div id="app" class="p-6 my-2"> <!-- "app" ID is handle for VueJS -->
-                    <fwb-accordion>
+                    <fwb-accordion id="apps-accordion" data-accordion-target="apps-accordion">
                         <fwb-accordion-panel>
                         <fwb-accordion-header class="bg-amber-50 px-4 py-2 mx-2 my-2 block max-w-xl">header</fwb-accordion-header>
                         <fwb-accordion-content class="my-2 mx-2 block py-2">
