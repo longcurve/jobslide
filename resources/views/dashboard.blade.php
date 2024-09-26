@@ -6,15 +6,16 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 border-2">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     Welcome to JobSlide! 
                 </div>
+                <div id="app" class="p-6 my-2"> <!-- "app" ID is handle for VueJS -->
                     <fwb-accordion>
                         <fwb-accordion-panel>
-                        <fwb-accordion-header class="bg-amber-50 px-4 py-2">header</fwb-accordion-header>
-                        <fwb-accordion-content class="py-2">
+                        <fwb-accordion-header class="bg-amber-50 px-4 py-2 mx-2 my-2 block max-w-xl">header</fwb-accordion-header>
+                        <fwb-accordion-content class="my-2 mx-2 block py-2">
                             <div>
                             <p class="mb-2 text-gray-500 dark:text-gray-400">
                                 Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.
@@ -52,6 +53,7 @@
                         </fwb-accordion-content>
                         </fwb-accordion-panel>
                     </fwb-accordion>
+                    </div>
             </div>
         </div>
     </div>
