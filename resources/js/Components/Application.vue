@@ -1,6 +1,5 @@
  <script setup>
         import { ref } from 'vue'
-        import Applications from './Applications'
 
         const faqs = ref(data) // data is above array of faq questions & answers
 </script>
