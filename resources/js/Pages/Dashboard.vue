@@ -1,7 +1,7 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
-import Application from '../Components/Applications';
+import Applications from '../Components/Applications.vue';
 
     const accordionElement = document.getElementById('accordion-example');
 

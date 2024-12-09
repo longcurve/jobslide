@@ -1,6 +1,6 @@
  <script setup>
 import { ref } from 'vue'
-import Application from '.Application'
+import Application from '.Application.vue'
     data = {};
     const applications = ref(data) // data is above array of applications
     
