@@ -58,7 +58,7 @@ import Applications from '../Components/Applications.vue';
 <template>
     <Head title="Dashboard" />
 
-    <AuthenticatedLayout>f
+    <AuthenticatedLayout>
         <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 Dashboard

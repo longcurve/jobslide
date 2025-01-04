@@ -8,7 +8,7 @@ import Application from './Application.vue'
     <template>
         <main>
             <div id="applications">
-                <p>Applications</p>
+               
             </div>
         </main>
     </template>
