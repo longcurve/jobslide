@@ -1,14 +1,21 @@
  <script setup>
 import { ref } from 'vue'
 import Application from './Application.vue'
-    data = {};
+    data = {
+
+    };
     const applications = ref(data) // data is above array of applications
     
 </script>
     <template>
         <main>
+            <h1>Applications</h1>
             <div id="applications">
-               
+                <Application
+                        v-for="app in Applications"
+                        :key="app.id"
+                        :app="app"
+                    />
             </div>
         </main>
     </template>

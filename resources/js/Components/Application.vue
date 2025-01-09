@@ -4,13 +4,8 @@
         const faqs = ref(data) // data is above array of faq questions & answers
 </script>
     <template>
-    <h1>Applications</h1>
         <div class="application">
-            <Application
-                        v-for="app in Applications"
-                        :key="app.id"
-                        :app="app"
-                    />
+           
         </div>
     </template>
     <style scoped lang="less">
