@@ -5,7 +5,17 @@
 </script>
     <template>
         <div class="application">
-           
+           <details>
+                <summary>
+                    <date name="date" />
+                    <input type="text" name="position" />
+                    <input type="text" name="company" />
+                </summary>
+                <input type="text" name="contact_email" />
+                <input type="text" name="contact_phone" />
+                <textarea name="calls"></textarea>
+                <textarea name="interviews"></textarea>
+           </details>
         </div>
     </template>
     <style scoped lang="less">
