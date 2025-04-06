@@ -1,20 +1,37 @@
  <script setup>
 import { ref } from 'vue'
 import Application from './Application.vue'
-    data = {
-
-    };
-    const applications = ref(data) // data is above array of applications
+    let data = [
+        {
+        "id": 12345,
+        "date": "11/01/2025", 
+        "position": "Cashier", 
+        "company": "Retailed", 
+        "location": "Syracuse, NY",
+        "contact_email": "contact@email.com", 
+        "contact_phone": "291-666-5454",
+        "calls": "Calls",
+        "interviews": "Interviews"
+        }
+    ];
+    const Applications = ref(data) // data is above array of applications
     
 </script>
     <template>
         <main>
-            <h1>Applications</h1>
+            
             <div id="applications">
                 <Application
-                        v-for="app in Applications"
-                        :key="app.id"
-                        :app="app"
+                        v-for="row in Applications"
+                        :key="row.id"
+                        :date="row.date"
+                        :position="row.position"
+                        :company="row.company"
+                        :location="row.location"
+                        :contact_email="row.contact_email"
+                        :contact_phone="row.contact_phone"
+                        :calls="row.calls"
+                        :interviews="row.interviews"
                     />
             </div>
         </main>
