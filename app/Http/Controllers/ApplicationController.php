@@ -5,27 +5,27 @@ namespace App\Http\Controllers;
 use App\Models\Application;
 use App\Http\Requests\StoreApplicationRequest;
 use App\Http\Requests\UpdatetApplicationRequest;
-use App\Interfaces\ApplicationRepositoryInterface;
+
 use App\Classes\ResponseClass;
 use App\Http\Resources\ApplicationResource;
 use Illuminate\Support\Facades\DB;
 class ApplicationController extends Controller
 {
     
-    private ApplicationRepositoryInterface $applcationRepositoryInterface;
     
-    public function __construct(ApplicationRepositoryInterface $applicationRepositoryInterface)
+    
+    public function __construct()
     {
-        $this->applicationRepositoryInterface = $applicationRepositoryInterface;
+        
     }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = $this->applicationRepositoryInterface->index();
+        $data = Application::all();
 
-        return ResponseClass::sendResponse(ApplicationResource::collection($data),'',200);
+        return response()->json($data);
     }
 
     /**

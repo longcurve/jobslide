@@ -1,7 +1,9 @@
  <script setup>
-import { ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import Application from './Application.vue'
-    let data = [
+
+    let data = ref();
+    let test_data = [
         {
         "id": 12345,
         "date": "11/01/2025", 
@@ -14,15 +16,23 @@ import Application from './Application.vue'
         "interviews": "Interviews"
         }
     ];
-    const Applications = ref(data) // data is above array of applications
-    
+    const applications = ref(data); // data is above array of applications
+
+    onMounted(() => {
+        axios
+        .get('http://172.23.18.177:8000/api/applications')
+        .then((response) => {
+            data.value = response;
+            console.log(response);
+        })
+    });
 </script>
     <template>
         <main>
             
             <div id="applications">
                 <Application
-                        v-for="row in Applications"
+                        v-for="row in applications"
                         :key="row.id"
                         :date="row.date"
                         :position="row.position"
@@ -46,7 +56,7 @@ import Application from './Application.vue'
             background-color: rgb(240, 248, 255);
             padding: 10px;
             border-radius: 6px;
-            .faqs{
+            .applications{
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
